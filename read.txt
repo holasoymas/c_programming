@@ -1,3 +1,7 @@
 git stash
     I do not want to commit this changes but I also dont want to delete this file.
     I want you to go back stage and whenever I want you I will bring you back. 
+
+git stash pop
+    All the files in the back stage come back to staging area.
+    
