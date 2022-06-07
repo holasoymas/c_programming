@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<string.h>
 
 struct Employee
 {
@@ -6,8 +7,9 @@ struct Employee
     char post[20];
     int salary;
 };
-void main(){
-    struct Employee e[10], temp;
+int main(){
+    struct Employee e[10], temp[10];
+    // char temp[20];
     int i, j, num;
     printf("How many employee ---> ");
     scanf("%d",&num);
@@ -25,12 +27,14 @@ void main(){
     {
         for ( j = i; j < num; j++)
         {
-            if(e[i].salary > e[j].salary){
-                temp = e[i];
-                e[i] = e[j];
-                e[j] = temp;
+        
+            if(strcmp(e[i].name, e[j].name) > 0){
+                strcpy(temp[i].name, e[i].name);
+                strcpy(e[i].name, e[j].name);
+                strcpy(e[j].name, temp[i].name);
+
             }
-        }    
+        }
     }
 
     printf("Name\t Post\t Salary\t\n");
@@ -38,4 +42,5 @@ void main(){
     {
         printf("%s\t %s\t %d\t\n",e[i].name, e[i].post, e[i].salary);
     }
+    return 0;
 }

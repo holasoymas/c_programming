@@ -24,9 +24,7 @@ void main(){
                 strcpy(names[i], names[j]);
                 strcpy(names[j], temp);
             }
-            
         }
-        
     }
 
     printf("Names in assending order ----> !\n");
@@ -34,8 +32,4 @@ void main(){
     {
         printf("%s\n", names[i]);
     }
-    
-    
-    
-    
 }
